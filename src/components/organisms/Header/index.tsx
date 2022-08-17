@@ -50,8 +50,6 @@ const Header = () => {
   const { cart } = useShoppingCartContext()
   const { authUser, isLoading } = useAuthContext()
 
-  console.log(`現在のカートの商品数 ${cart.length}`)
-
   return (
     <HeaderRoot>
       <Flex paddingLeft={3} paddingRight={3} justifyContent="space-between">
