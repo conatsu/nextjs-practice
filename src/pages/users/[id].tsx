@@ -57,7 +57,7 @@ const UserPage: NextPage<UserPageProps> = ({
               {/*
                   ユーザープロファイルコンテナ
                   ユーザー情報を表示する。useUserで常に最新のデータを取得する。
-                */}
+              */}
               <UserProfileContainer userId={id} user={user} />
             </Box>
             <Box marginBottom={1}>
@@ -66,7 +66,7 @@ const UserPage: NextPage<UserPageProps> = ({
             {/*
                 ユーザー商品カードリストコンテナ
                 ユーザーが所持する商品カードリストを表示する。useSearchで常に最新のデータを取得する。
-              */}
+            */}
             <UserProductCardListContainer userId={id} products={products} />
           </Box>
         </Box>
