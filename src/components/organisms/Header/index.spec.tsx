@@ -7,6 +7,7 @@ import type { User, Product } from 'types'
 
 // ShoppingCartContextのモック
 jest.mock('contexts/ShoppingCartContext')
+// eslint-disable-next-line import/order
 import { useShoppingCartContext } from 'contexts/ShoppingCartContext'
 // オリジナルのShoppingCartContextProviderを取得
 const { ShoppingCartContextProvider } = jest.requireActual(
@@ -44,9 +45,9 @@ describe('Header', () => {
   it('カートに商品が存在する', async () => {
     useShoppingCartContextMock.mockReturnValue({
       cart: [product],
-      //eslint-disalbe-next-line @typescript-eslint/no-empty-function
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       addProductToCart: () => {},
-      //eslint-disalbe-next-line @typescript-eslint/no-empty-function
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       removeProductFromCart: () => {},
     })
 
@@ -75,7 +76,7 @@ describe('Header', () => {
       cart: [],
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       addProductToCart: () => {},
-      //eslint-disalbe-next-line @typescript-eslint/no-empty-function
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       removeProductFromCart: () => {},
     })
 
@@ -89,7 +90,7 @@ describe('Header', () => {
       </ThemeProvider>,
     )
 
-    // サインインしてない
+    // サインインしていない
     expect(screen.queryByTestId('profile-shape-image')).toBeNull()
 
     // カートが空
